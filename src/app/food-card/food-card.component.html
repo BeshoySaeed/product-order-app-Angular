@@ -1,0 +1,17 @@
+<div class="card">
+    <div class="container">
+       <a class="image-tag"> <img [src]="foodItem.img" alt="" style="height: 220px;"></a>
+        <div class="rank-it flex justify-content-between">
+            <p>{{ foodItem.name }}</p>
+            <i class="pi cursor-pointer" [ngClass]="{ 'pi-star': empty, 'pi-star-fill' : !empty }" style="color: red; " (click)="addFav(foodItem)" ></i>
+        </div>
+        <p>{{ foodItem.description }}</p>
+        <ng-container *ngFor="let star of iterateFunction(foodItem.stars)">
+            <i class="pi pi-star-fill" style="font-size: 1rem; color: gold;"></i>
+        </ng-container>
+    </div>
+    <!-- <a [routerLink]="['item', foodItem.id]"> <button class="bg-black-alpha-80 text-white px-4 py-2 border-round-2xl cursor-pointer">meal Data</button></a> -->
+    <a   [routerLink]="['/cart', foodItem.id]" class="deta-link bg-bluegray-800 text-white text-2xl font-bold "
+    > Details
+      </a>
+</div>

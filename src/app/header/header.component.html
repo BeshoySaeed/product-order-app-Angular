@@ -1,0 +1,30 @@
+<header>
+  <div
+    class="container flex justify-content-between px-6 py-4 align-content-center"
+  >
+    <a routerLink="/" class="logo no-underline font-bold text-3xl"
+      >Food Mine!</a
+    >
+    <nav>
+      <fa-icon [icon]="bar" class="icon" (click)="barClick()"></fa-icon>
+      <ul class="flex list-none align-items-center" [ngClass]="{ right: appear }">
+        <li class="mr-3">
+          <a routerLink="/cart" class="no-underline font-bold">Cart</a>
+        </li>
+        <li class="mr-3">
+          <a routerLink="/favourite" class="no-underline font-bold">Favourite</a>
+        </li>
+        <li class="mr-3">
+          <a routerLink="/cart" class="no-underline font-bold">History</a>
+        </li>
+        <li class="mr-3">
+            <button class="bg-primary px-4 py-2 border-round border-0 cursor-pointer">login</button>
+        </li>
+        <li class="mr-3">
+            <button class="bg-red-500 px-4 py-2 border-round border-0 cursor-pointer text-white font-bold">register</button>
+        </li>
+    
+      </ul>
+    </nav>
+  </div>
+</header>

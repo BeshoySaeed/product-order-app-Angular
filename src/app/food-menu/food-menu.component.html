@@ -1,0 +1,5 @@
+<div class="container flex justify-content-center flex-wrap gap-7 mx-8 px-8">
+    <ng-container *ngFor="let meal of foodList; let i = index">
+        <app-food-card [foodItem] = meal ></app-food-card>
+    </ng-container>
+</div>

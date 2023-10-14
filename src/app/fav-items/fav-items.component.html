@@ -1,0 +1,31 @@
+<main>
+    <div class="container">
+        <table>
+            <tr>
+                <th>image</th>
+                <th>name</th>
+                <th>quantity</th>
+                <th>price</th>
+                <th>access</th>
+            </tr>
+        <ng-container *ngFor="let item of favItemArr">
+            <tr>
+                <td>
+                    <img src="{{ item.img }}" alt="" style="height: 200px;">
+                </td>
+                <td>
+                    <p>{{item.name}}</p>
+                </td>
+                <td>
+                    <p>1</p>
+                </td>
+                <td>
+                    <fa-icon [icon]="trashicon" class="cursor-pointer" (click)="trashIt(item)"></fa-icon>
+                </td>
+
+            </tr>
+        </ng-container>
+    </table>
+
+    </div>
+</main>
